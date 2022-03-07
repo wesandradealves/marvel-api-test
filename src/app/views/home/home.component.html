@@ -1,4 +1,4 @@
-<app-search-bar [expanded]="!searchQuery" (onSearchQuery)="onSearchQuery($event)"></app-search-bar>
+<app-search-bar *ngIf="filter" [expanded]="!searchQuery" (onSearchQuery)="onSearchQuery($event)"></app-search-bar>
 
 <section [ngStyle]="{'padding-top': searchQuery ? '78px' : ''}" id="search-results" *ngIf="filter; else elseBlock">
     <ul id="search-list" [ngStyle]="{'min-height': searchQuery ? 'calc(100vh - 78px)' : '100vh'}">
