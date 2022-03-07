@@ -1,0 +1,5 @@
+<section [className]="isExpanded ? 'is-expanded' : 'is-collapsed'" id="search-bar">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <input type="text" (change)="keyPress($any($event.target).value)"  placeholder="Busca..." matInput/>
+    </mat-form-field>
+</section>

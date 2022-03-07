@@ -1,0 +1,23 @@
+body {
+    background-color: azure;
+    #search-results {
+        transition: padding-top 500ms ease-in-out;
+        #search-list {
+            min-height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch;
+            .search-item {
+                flex: 0 0 100%;
+                @media screen and (min-width: 568px) {
+                    flex: 0 0 33%;
+                    @media screen and (min-width: 768px) {
+                        flex: 0 0 25%;
+                    }                     
+                }                
+                padding: 0 0 21%;
+                position: relative;
+            }
+        }
+    }    
+}

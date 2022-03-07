@@ -1,0 +1,42 @@
+#info-view {
+    height: calc(100vh - 61px);
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    @media screen and (min-width: 768px) {
+       flex-flow: row wrap;
+    }   
+    > * {
+        flex: 1;
+    }
+    .info-view--thumbnail {
+        flex: 0 0 auto; 
+        background-size: cover;
+        background-position: right bottom;
+        background-repeat: no-repeat;        
+        width: 100%;
+        padding: 0 0 25%;
+        @media screen and (min-width: 568px) {
+            @media screen and (min-width: 990px) {
+                width: 40%;
+                padding: 0;
+                background-position: center ;
+            }       
+        }           
+    }
+    .info-view--info {
+        overflow: auto;
+        padding: 15px;
+        color: white;
+        line-height: 1.2;
+        strong {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        ul:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
