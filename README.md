@@ -1,4 +1,5 @@
-# CONTACT
+# CONTACT INFO
+[*] Wesley Alves, BRA
 * 55 21 981394594
 * wesandradealves@gmail.com
 * https://www.linkedin.com/in/wesandradealves/
