@@ -1,0 +1,40 @@
+
+<section *ngIf="character; else elseBlock">
+    <app-top-bar [data]="character"></app-top-bar>
+    <div id="info-view">
+        <div [title]="character.name" class="info-view--thumbnail" [ngStyle]="{'background-image': 'url(' + character.thumbnail.path + '.' + character.thumbnail.extension + ')'}"></div>
+        <div class="info-view--info">
+            <p *ngIf="character.description">{{character.description}}</p>
+            <span>
+                <strong>Comics</strong>
+                <ul>
+                    <li *ngFor="let item of character.comics.items">
+                        <span><a target="_blank">{{item.name}}</a></span>
+                    </li>                    
+                </ul>
+                <strong>Events</strong>
+                <ul>
+                    <li *ngFor="let item of character.events.items">
+                        <span><a target="_blank">{{item.name}}</a></span>
+                    </li>                    
+                </ul>  
+                <strong>Series</strong>
+                <ul>
+                    <li *ngFor="let item of character.series.items">
+                        <span><a target="_blank">{{item.name}}</a></span>
+                    </li>                    
+                </ul>   
+                <strong>Stories</strong>
+                <ul>
+                    <li *ngFor="let item of character.stories.items">
+                        <span><a target="_blank">{{item.name}}</a></span>
+                    </li>                    
+                </ul>                                                
+            </span>
+        </div>
+    </div>
+</section>
+
+<ng-template #elseBlock>
+    <app-spinner></app-spinner>
+</ng-template>

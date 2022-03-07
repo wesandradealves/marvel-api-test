@@ -1,0 +1,19 @@
+#top-bar {
+    color: white;
+    background-color: #ED1D24;
+    .container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: flex;
+        align-items: center;
+        .top-bar--title {
+            font-size: 1rem;
+            margin: 0;
+            padding: 0 0 0 15px;
+        }
+        svg {
+            height: 40px;
+            width: auto;
+        }
+    }
+}
