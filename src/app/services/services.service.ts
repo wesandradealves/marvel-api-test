@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-const md5 = require('md5');
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {  
+  md5 = require('md5');
   ts = Number(new Date());
-  hash = md5(this.ts + environment.privateKey + environment.publicKey);   
+  hash = this.md5(this.ts + environment.privateKey + environment.publicKey);   
 
   getCharacters = async (payload?:any) => {
     const type = typeof payload;
