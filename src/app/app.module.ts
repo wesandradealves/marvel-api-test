@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -35,7 +35,9 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     MatInputModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [DataService],
+  providers: [DataService, {
+    provide: LocationStrategy , useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
