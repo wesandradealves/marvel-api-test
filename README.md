@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+## CONTACT INFO
+Wesley Alves, BRA
+* 55 21 981394594
+* wesandradealves@gmail.com
+* https://www.linkedin.com/in/wesandradealves/
+
+## URLS
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
