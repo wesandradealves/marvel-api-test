@@ -19,19 +19,20 @@
         background-repeat: no-repeat;        
         width: 100%;
         padding: 0 0 25%;
-        @media screen and (min-width: 568px) {
-            @media screen and (min-width: 990px) {
-                width: 40%;
-                padding: 0;
-                background-position: center ;
-            }       
-        }           
+        @media screen and (min-width: 990px) {
+            width: 40%;
+            padding: 0;
+            background-position: center ;
+        }             
     }
     .info-view--info {
         overflow: auto;
         padding: 15px;
         color: white;
         line-height: 1.2;
+        @media screen and (min-width: 990px) {
+            max-height: calc(100vh - 91px);
+        }           
         strong {
             font-size: 1.2rem;
             font-weight: bold;
